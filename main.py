@@ -145,7 +145,7 @@ def main():
     current_uncompensated = (total_S * 1000) / voltage  # Convert kVA to VA, then calculate current
     
     # Calculate power factor correction
-    Q_capacitor = -total_Q  # kVAR needed to cancel reactive power
+    Q_capacitor = total_Q  # kVAR needed to cancel reactive power
     
     # Calculate capacitor parameters
     if abs(Q_capacitor) > 1e-6:  # Only if correction is needed
